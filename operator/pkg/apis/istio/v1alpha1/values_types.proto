@@ -1153,7 +1153,7 @@ message ProxyConfig {
   repeated google.protobuf.Struct volumes = 40;
 
   // Additional volumeMounts to add to the istio-proxy container, including side and gateway.
-  repeated google.protobuf.Struct volumeMounts = 41;
+  repeated google.protobuf.Struct volumeMounts = 42;
 
 }
 
