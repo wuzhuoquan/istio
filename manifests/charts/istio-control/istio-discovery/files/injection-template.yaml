@@ -415,7 +415,7 @@ spec:
       mountPath: /var/run/secrets/workload-spiffe-uds
     - name: credential-socket
       mountPath: /var/run/secrets/credential-uds
-    {{- with .Values.global.proxy.volumeMounts  }}
+    {{- with .Values.global.proxy.volumeMounts }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
     {{- if eq .Values.global.caName "GkeWorkloadCertificate" }}
@@ -469,7 +469,7 @@ spec:
     name: workload-socket
   - emptyDir:
     name: credential-socket
-  {{- with .Values.global.proxy.volumes  }}
+  {{- with .Values.global.proxy.volumes }}
     {{- toYaml . | nindent 2 }}
   {{- end }}
   {{- if eq .Values.global.caName "GkeWorkloadCertificate" }}
